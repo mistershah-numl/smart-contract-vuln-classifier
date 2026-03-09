@@ -21,3 +21,12 @@ jupyter nbconvert --to notebook --execute smart_contract_vulnerability_classifie
 
 ## Checkpoint
 rf_n200_depth10_seed42.pkl — Random Forest, n=200, max_depth=10, seed=42
+
+## Dataset Design
+
+To avoid trivial detection, two noise sources were injected:
+
+- 28% of safe contracts use `call.value()` correctly following the Checks-Effects-Interactions pattern.
+- 6% label noise simulates real-world annotation uncertainty.
+
+This prevents simple token-based classifiers from achieving perfect separation.
