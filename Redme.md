@@ -30,3 +30,13 @@ To avoid trivial detection, two noise sources were injected:
 - 6% label noise simulates real-world annotation uncertainty.
 
 This prevents simple token-based classifiers from achieving perfect separation.
+## Evaluation
+
+| Metric | Value |
+|------|------|
+| Test Accuracy | 0.9464 |
+| Test F1 | 0.9412 |
+| Test AUC | 0.9837 |
+| CV F1 | 0.8898 ± 0.0225 |
+
+Evaluation performed using a stratified train/validation/test split (70/15/15) and 5-fold cross-validation.
