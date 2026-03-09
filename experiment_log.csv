@@ -1,0 +1,6 @@
+run_id,model,n_estimators,max_depth,val_f1,val_auc,decision
+run_001,LogisticRegression,N/A,N/A,0.8571,0.89,"Baseline — lower F1, cannot model nonlinear feature interactions"
+run_002,RandomForest,50,10,0.8271,0.8744,n=50 — higher CV variance (std=0.04 vs 0.01 at n=200)
+run_003,RandomForest,200,10,0.8571,0.8944,"SELECTED — best F1, CV std=0.01, interpretable importances"
+run_004,XGBoost,200,5,0.8627,0.8962,Comparable F1 but 3+ HPs to tune; less stable importances
+run_005,TF-IDF+LR,N/A,N/A,0.3415,0.5806,Generic text — domain features significantly outperform
